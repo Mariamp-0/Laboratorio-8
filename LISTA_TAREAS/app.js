@@ -51,7 +51,7 @@ function mostrarTareas() {
     `;
   });
 
-  let botonOk = document.querySelectorAll(".btn_ok");
+  let botonOk = document.querySelectorAll(".btn_ok"); //Llamar botones con DOM
   botonOk.forEach((boton) => {
     boton.addEventListener('click', function () {
       let AtributoIndice = this.getAttribute("data-index");
@@ -59,8 +59,8 @@ function mostrarTareas() {
     });
   })
 
-  let botonesEliminar = document.querySelectorAll(".btn_eliminar");
-  botonesEliminar.forEach((boton) => {
+  let botonEliminar = document.querySelectorAll(".btn_eliminar"); //Llamar botones con DOM
+  botonEliminar.forEach((boton) => {
     boton.addEventListener('click', function () {
       let AtributoIndice= this.getAttribute("data-index");
       eliminarTarea(AtributoIndice)
@@ -93,7 +93,7 @@ function nuevaTarea() {
     }
 
     datosTareas.push(nueva);
-    guardarTareasLocalStorage(datosTareas)
+    guardarTareasLocalStorage(datosTareas) 
     mostrarTareas();
     ingresarTarea.value = "";
   }
